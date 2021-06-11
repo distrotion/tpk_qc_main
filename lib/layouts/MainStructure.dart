@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:tpk_qc_main/widget/Menu/MainMenu.dart';
 
 class MainStructure extends StatelessWidget {
   @override
@@ -38,6 +39,7 @@ class Left extends StatelessWidget {
       child: Container(
         width: 250,
         color: Colors.blue,
+        child: MainMenu(),
       ),
     );
   }
