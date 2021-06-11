@@ -40,17 +40,17 @@ class MenuDetail extends StatelessWidget {
                   // )
                 ),
                 const SizedBox(width: 15),
-                // Text(
-                //   titleS2['text'],
-                //   style: TextStyle(color: Colors.white, fontSize: 12.0),
-                // ),
-                TextButton(
-                  child: Text(
-                    titleS2['text'],
-                    style: TextStyle(color: Colors.white, fontSize: 15.0),
-                  ),
-                  onPressed: () {/* ... */},
+                Text(
+                  titleS2['text'],
+                  style: TextStyle(color: Colors.white, fontSize: 12.0),
                 ),
+                // TextButton(
+                //   child: Text(
+                //     titleS2['text'],
+                //     style: TextStyle(color: Colors.white, fontSize: 15.0),
+                //   ),
+                //   onPressed: () {/* ... */},
+                // ),
               ],
             ),
           )),
