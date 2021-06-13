@@ -69,11 +69,11 @@ class Logo1 extends StatelessWidget {
         child: Text(
           "Thaiparker QC BP12",
           style: TextStyle(
-            fontFamily: 'Mitr',
+            //fontFamily: 'Mitr',
             color: Colors.white,
             fontSize: 26,
             fontWeight: FontWeight.w400,
-            //fontStyle: FontStyle.normal,
+            fontStyle: FontStyle.normal,
             letterSpacing: 0,
           ),
         ),
@@ -143,7 +143,7 @@ class _Time_State extends State<Time_> {
       builder: (context, snapshot) {
         return Center(
           child: Text(
-            DateFormat(' hh:mm').format(DateTime.now()),
+            DateFormat('hh:mm a').format(DateTime.now()),
             style: TextStyle(
               fontFamily: 'Mitr',
               color: Colors.white,

@@ -8,19 +8,13 @@ class MainStructure extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('QC TPK BP12'),
+          //title: Text('QC TPK BP12'),
           centerTitle: false,
           backgroundColor: const Color(0xFF0b1327),
           actions: <Widget>[App_Bar()],
         ),
         body: ScreenTypeLayout(
-          desktop:
-              // Column(
-              //   children: [
-              //     App_Bar(),
-              Row(children: <Widget>[Left(), Center()]),
-          //   ],
-          // ),
+          desktop: Row(children: <Widget>[Left(), Center()]),
           tablet: Row(children: <Widget>[Left(), Center()]),
           mobile: Row(children: <Widget>[Left(), Center()]),
           //watch: Row(children: <Widget>[Left(), Center()]),
