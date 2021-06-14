@@ -22,15 +22,23 @@ class MainStructure extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          //title: Text('QC TPK BP12'),
-          centerTitle: false,
+          // //title: Text('QC TPK BP12'),
+          // centerTitle: false,
           backgroundColor: const Color(0xFF0b1327),
-          actions: <Widget>[App_Bar()],
+          actions: <Widget>[
+            SizedBox(
+              width: 50,
+            ),
+            App_Bar()
+          ],
+        ),
+        drawer: Drawer(
+          child: Left(),
         ),
         body: ScreenTypeLayout(
           desktop: Row(children: <Widget>[Left(), PC_Center(page)]),
-          tablet: Row(children: <Widget>[Left(), PC_Center(page)]),
-          mobile: Row(children: <Widget>[Left(), PC_Center(page)]),
+          tablet: Row(children: <Widget>[PC_Center(page)]),
+          mobile: Row(children: <Widget>[PC_Center(page)]),
 
           //watch: Row(children: <Widget>[Left(), Center()]),
 
@@ -55,7 +63,7 @@ class Left extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       //height: (MediaQuery.of(context).size.height - 70),
-      width: 200,
+      width: 225,
       color: Color(0xff0b1327),
       child: ListView(
         children: [MainMenu()],

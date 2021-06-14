@@ -10,10 +10,11 @@ import 'package:tpk_qc_main/view/page/MATCPlist.dart';
 import 'package:tpk_qc_main/view/page/MasterFinal.dart';
 import 'package:tpk_qc_main/view/page/MasterIncomming.dart';
 import 'package:tpk_qc_main/view/page/Report.dart';
+import 'package:tpk_qc_main/widget/AppBar/App_Bar.dart';
 
 void main() {
   ResponsiveSizingConfig.instance.setCustomBreakpoints(
-    ScreenBreakpoints(desktop: 950, tablet: 750, watch: 300),
+    ScreenBreakpoints(desktop: 950, tablet: 800, watch: 300),
   );
   runApp(MyApp());
 }
@@ -52,6 +53,8 @@ class MyApp extends StatelessWidget {
           page = MainStructure(MasterIncomming());
         } else if (settings.name == routeMasterFinal) {
           page = MainStructure(MasterFinal());
+        } else if (settings.name == routeLogin) {
+          page = Login();
         } else {
           throw Exception('Unknown route: ${settings.name}');
         }

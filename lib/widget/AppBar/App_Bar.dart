@@ -13,9 +13,10 @@ class App_Bar extends StatefulWidget {
 class _App_BarState extends State<App_Bar> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Expanded(
+        child: Container(
       height: 70,
-      width: MediaQuery.of(context).size.width,
+      //width: MediaQuery.of(context).size.width,
       color: Color(0xff0b1327),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,7 +30,7 @@ class _App_BarState extends State<App_Bar> {
           Pack_topright_bar(),
         ],
       ),
-    );
+    ));
   }
 
   ///###################################################################################
