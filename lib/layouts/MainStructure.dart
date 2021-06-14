@@ -80,6 +80,7 @@ class PC_Center extends StatelessWidget {
       child: Expanded(
         child: Scaffold(
           body: MaterialApp(
+            debugShowCheckedModeBanner: false,
             //color: Colors.red,
             initialRoute: '/',
             routes: {
