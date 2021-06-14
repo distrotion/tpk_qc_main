@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:tpk_qc_main/layouts/MainStructure.dart';
 import 'package:tpk_qc_main/view/page/Login.dart';
 //import 'package:http/http.dart' as http;
 
@@ -105,13 +106,22 @@ class profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      //child: Image.asset("assets/icons/icon-notifications.png"),
-      child: Icon(Icons.account_circle_outlined),
-      width: 24,
-      height: 24,
-      decoration: new BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
+    return InkWell(
+      onLongPress: () {
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(builder: (context) => Login()),
+        // );
+        Navigator.pushNamed(context, routeHome);
+      },
+      child: Container(
+        //child: Image.asset("assets/icons/icon-notifications.png"),
+        child: Icon(Icons.account_circle_outlined),
+        width: 24,
+        height: 24,
+        decoration: new BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+        ),
       ),
     );
   }
@@ -122,10 +132,7 @@ class logout extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onLongPress: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => Login()),
-        // );
+        Navigator.pushNamed(context, routeLogin);
       },
       child: Container(
         width: 24,

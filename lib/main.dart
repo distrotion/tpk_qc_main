@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:tpk_qc_main/layouts/MainStructure.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:tpk_qc_main/view/page/GraphList.dart';
-import 'package:tpk_qc_main/view/page/GraphSTD.dart';
-import 'package:tpk_qc_main/view/page/Home.dart';
-import 'package:tpk_qc_main/view/page/Judement.dart';
+
 import 'package:tpk_qc_main/view/page/Login.dart';
-import 'package:tpk_qc_main/view/page/MATCPlist.dart';
-import 'package:tpk_qc_main/view/page/MasterFinal.dart';
-import 'package:tpk_qc_main/view/page/MasterIncomming.dart';
-import 'package:tpk_qc_main/view/page/Report.dart';
+
+import 'package:tpk_qc_main/view/page/PC/GraphList.dart';
+import 'package:tpk_qc_main/view/page/PC/GraphSTD.dart';
+import 'package:tpk_qc_main/view/page/PC/Home.dart';
+import 'package:tpk_qc_main/view/page/PC/Judement.dart';
+import 'package:tpk_qc_main/view/page/PC/MATCPlist.dart';
+import 'package:tpk_qc_main/view/page/PC/MasterFinal.dart';
+import 'package:tpk_qc_main/view/page/PC/MasterIncomming.dart';
+import 'package:tpk_qc_main/view/page/PC/Report.dart';
+
+import 'package:tpk_qc_main/view/page/PC/dashboard.dart';
+import 'package:tpk_qc_main/view/page/PC/test.dart';
 import 'package:tpk_qc_main/widget/AppBar/App_Bar.dart';
 
 void main() {
   ResponsiveSizingConfig.instance.setCustomBreakpoints(
-    ScreenBreakpoints(desktop: 950, tablet: 800, watch: 300),
+    ScreenBreakpoints(desktop: 1000, tablet: 900, watch: 300),
   );
   runApp(MyApp());
 }
@@ -55,6 +60,8 @@ class MyApp extends StatelessWidget {
           page = MainStructure(MasterFinal());
         } else if (settings.name == routeLogin) {
           page = Login();
+        } else if (settings.name == '/test') {
+          page = MainStructure(Mainmenu_center());
         } else {
           throw Exception('Unknown route: ${settings.name}');
         }

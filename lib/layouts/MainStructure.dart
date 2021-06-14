@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:tpk_qc_main/view/page/Home.dart';
-import 'package:tpk_qc_main/view/page/MATCPlist.dart';
+import 'package:tpk_qc_main/view/page/PC/Home.dart';
+import 'package:tpk_qc_main/view/page/PC/MATCPlist.dart';
 import 'package:tpk_qc_main/widget/Menu/MainMenu.dart';
 import 'package:tpk_qc_main/widget/AppBar/App_Bar.dart';
 
@@ -32,8 +32,11 @@ class MainStructure extends StatelessWidget {
             App_Bar()
           ],
         ),
-        drawer: Drawer(
-          child: Left(),
+        drawer: Container(
+          width: 200,
+          child: Drawer(
+            child: Left(),
+          ),
         ),
         body: ScreenTypeLayout(
           desktop: Row(children: <Widget>[Left(), PC_Center(page)]),
@@ -63,7 +66,7 @@ class Left extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       //height: (MediaQuery.of(context).size.height - 70),
-      width: 225,
+      width: 200,
       color: Color(0xff0b1327),
       child: ListView(
         children: [MainMenu()],
@@ -74,11 +77,6 @@ class Left extends StatelessWidget {
 
 @immutable
 class PC_Center extends StatelessWidget {
-  // const PC_Center({
-  //   Key? key,
-  //   required this.setupPageRoute,
-  // }) : super(key: key);
-
   final Widget page;
   const PC_Center(this.page);
 
@@ -93,7 +91,7 @@ class PC_Center extends StatelessWidget {
             initialRoute: '/',
             routes: {
               routeHome: (context) => page,
-              routeMATCPlist: (context) => page,
+              //routeMATCPlist: (context) => page,
               //'/MATCPlist': (context) => MATCPlist(),
             },
           ),
