@@ -3,6 +3,15 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:tpk_qc_main/widget/Menu/MainMenu.dart';
 import 'package:tpk_qc_main/widget/AppBar/App_Bar.dart';
 
+const routeHome = '/';
+const routeLogin = '/login';
+const routeMasterincomming = '/MasterIncomming';
+const routeMasterFinal = '/MasterFinal';
+const routeMATCPlist = '/MATCPlist';
+const routeGraphList = '/GraphList';
+const routeGraphSTD = '/GraphSTD';
+const routeReport = '/Report';
+
 class MainStructure extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,9 +23,10 @@ class MainStructure extends StatelessWidget {
           actions: <Widget>[App_Bar()],
         ),
         body: ScreenTypeLayout(
-          desktop: Row(children: <Widget>[Left(), Center()]),
-          tablet: Row(children: <Widget>[Left(), Center()]),
-          mobile: Row(children: <Widget>[Left(), Center()]),
+          desktop: Row(children: <Widget>[Left(), PC_Center()]),
+          tablet: Row(children: <Widget>[Left(), PC_Center()]),
+          mobile: Row(children: <Widget>[Left(), PC_Center()]),
+
           //watch: Row(children: <Widget>[Left(), Center()]),
 
           // desktop: Container(
@@ -48,16 +58,26 @@ class Left extends StatelessWidget {
   }
 }
 
-class Center extends StatelessWidget {
+@immutable
+class PC_Center extends StatelessWidget {
+  // const PC_Center({
+  //   Key? key,
+  //   required this.setupPageRoute,
+  // }) : super(key: key);
+
+  // final String setupPageRoute;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Expanded(
         child: Scaffold(
-          body: Container(
-            color: Colors.red,
-          ),
-        ),
+            // body: Container(
+            //   color: Colors.red,
+
+            // ),
+
+            ),
       ),
     );
   }

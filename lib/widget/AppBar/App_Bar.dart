@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:tpk_qc_main/view/page/Login.dart';
 
 class App_Bar extends StatefulWidget {
   App_Bar({Key? key}) : super(key: key);
@@ -91,20 +92,20 @@ class Pack_topright_bar extends StatelessWidget {
           width: 150,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Time_(), Icon_bell(), Icon_profile()],
+            children: [Time_(), profile(), logout()],
           )),
     );
   }
 }
 
-class Icon_bell extends StatelessWidget {
-  const Icon_bell({Key? key}) : super(key: key);
+class profile extends StatelessWidget {
+  const profile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       //child: Image.asset("assets/icons/icon-notifications.png"),
-      child: Icon(Icons.ac_unit_outlined),
+      child: Icon(Icons.account_circle_outlined),
       width: 24,
       height: 24,
       decoration: new BoxDecoration(
@@ -114,16 +115,25 @@ class Icon_bell extends StatelessWidget {
   }
 }
 
-class Icon_profile extends StatelessWidget {
+class logout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      width: 24,
-      height: 24,
-      child: Icon(Icons.logout),
-      // decoration: new BoxDecoration(
-      //     borderRadius: BorderRadius.circular(8),
-      //     color: Colors.brown.shade300)
+    return InkWell(
+      onLongPress: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Login()),
+        );
+      },
+      child: Container(
+        width: 24,
+        height: 24,
+        child: Icon(Icons.logout),
+
+        // decoration: new BoxDecoration(
+        //     borderRadius: BorderRadius.circular(8),
+        //     color: Colors.brown.shade300)
+      ),
     );
   }
 }

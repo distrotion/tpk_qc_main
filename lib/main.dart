@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tpk_qc_main/layouts/MainStructure.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:tpk_qc_main/view/page/Home.dart';
+import 'package:tpk_qc_main/view/page/Login.dart';
 
 void main() {
   ResponsiveSizingConfig.instance.setCustomBreakpoints(
@@ -22,8 +24,8 @@ class MyApp extends StatelessWidget {
           textTheme: Theme.of(context).textTheme.apply(
                 fontFamily: 'Mitr',
               )),
-      home: MainStructure(),
       debugShowCheckedModeBanner: false,
+      home: MainStructure(),
     );
   }
 }
