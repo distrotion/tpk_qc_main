@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:tpk_qc_main/view/page/Login.dart';
+//import 'package:http/http.dart' as http;
 
 class App_Bar extends StatefulWidget {
-  App_Bar({Key? key}) : super(key: key);
+  //App_Bar({Key? key}) : super(key: key);
 
   @override
   _App_BarState createState() => _App_BarState();
@@ -120,10 +121,10 @@ class logout extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onLongPress: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Login()),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(builder: (context) => Login()),
+        // );
       },
       child: Container(
         width: 24,

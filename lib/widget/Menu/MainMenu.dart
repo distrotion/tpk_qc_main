@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tpk_qc_main/view/page/MATCPlist.dart';
+import 'package:tpk_qc_main/layouts/MainStructure.dart';
 
 class MainMenu extends StatefulWidget {
   @override
@@ -69,7 +71,9 @@ class _MainMenuState extends State<MainMenu> {
           letterSpacing: 0,
         ),
       ),
-      onLongPress: () {},
+      onLongPress: () {
+        Navigator.pushNamed(context, routeMasterincomming);
+      },
       horizontalTitleGap: 2,
     );
   }
@@ -93,7 +97,9 @@ class _MainMenuState extends State<MainMenu> {
           letterSpacing: 0,
         ),
       ),
-      onLongPress: () {},
+      onLongPress: () {
+        Navigator.pushNamed(context, routeMasterFinal);
+      },
       horizontalTitleGap: 2,
     );
   }
@@ -117,7 +123,9 @@ class _MainMenuState extends State<MainMenu> {
           letterSpacing: 0,
         ),
       ),
-      onLongPress: () {},
+      onLongPress: () {
+        Navigator.pushNamed(context, routeMATCPlist);
+      },
       horizontalTitleGap: 2,
     );
   }
@@ -141,7 +149,9 @@ class _MainMenuState extends State<MainMenu> {
           letterSpacing: 0,
         ),
       ),
-      onLongPress: () {},
+      onLongPress: () {
+        Navigator.pushNamed(context, routeGraphList);
+      },
       horizontalTitleGap: 2,
     );
   }
@@ -165,7 +175,9 @@ class _MainMenuState extends State<MainMenu> {
           letterSpacing: 0,
         ),
       ),
-      onLongPress: () {},
+      onLongPress: () {
+        Navigator.pushNamed(context, routeGraphSTD);
+      },
       horizontalTitleGap: 2,
     );
   }
@@ -189,7 +201,9 @@ class _MainMenuState extends State<MainMenu> {
           letterSpacing: 0,
         ),
       ),
-      onLongPress: () {},
+      onLongPress: () {
+        Navigator.pushNamed(context, routeJudement);
+      },
       horizontalTitleGap: 2,
     );
   }
@@ -213,7 +227,9 @@ class _MainMenuState extends State<MainMenu> {
           letterSpacing: 0,
         ),
       ),
-      onLongPress: () {},
+      onLongPress: () {
+        Navigator.pushNamed(context, routeReport);
+      },
       horizontalTitleGap: 2,
     );
   }

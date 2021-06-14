@@ -131,7 +131,7 @@ packages:
     source: hosted
     version: "0.15.0"
   http:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: http
       url: "https://pub.dartlang.org"
@@ -278,7 +278,7 @@ packages:
     source: hosted
     version: "4.2.1"
   provider:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: provider
       url: "https://pub.dartlang.org"

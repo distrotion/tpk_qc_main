@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:tpk_qc_main/view/page/Home.dart';
+import 'package:tpk_qc_main/view/page/MATCPlist.dart';
 import 'package:tpk_qc_main/widget/Menu/MainMenu.dart';
 import 'package:tpk_qc_main/widget/AppBar/App_Bar.dart';
 
@@ -10,9 +12,12 @@ const routeMasterFinal = '/MasterFinal';
 const routeMATCPlist = '/MATCPlist';
 const routeGraphList = '/GraphList';
 const routeGraphSTD = '/GraphSTD';
+const routeJudement = '/Judement';
 const routeReport = '/Report';
 
 class MainStructure extends StatelessWidget {
+  final Widget page;
+  const MainStructure(this.page);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,9 +28,9 @@ class MainStructure extends StatelessWidget {
           actions: <Widget>[App_Bar()],
         ),
         body: ScreenTypeLayout(
-          desktop: Row(children: <Widget>[Left(), PC_Center()]),
-          tablet: Row(children: <Widget>[Left(), PC_Center()]),
-          mobile: Row(children: <Widget>[Left(), PC_Center()]),
+          desktop: Row(children: <Widget>[Left(), PC_Center(page)]),
+          tablet: Row(children: <Widget>[Left(), PC_Center(page)]),
+          mobile: Row(children: <Widget>[Left(), PC_Center(page)]),
 
           //watch: Row(children: <Widget>[Left(), Center()]),
 
@@ -49,10 +54,11 @@ class Left extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
-        width: 250,
-        color: Color(0xff0b1327),
-        child: MainMenu(),
+      //height: (MediaQuery.of(context).size.height - 70),
+      width: 200,
+      color: Color(0xff0b1327),
+      child: ListView(
+        children: [MainMenu()],
       ),
     );
   }
@@ -65,19 +71,24 @@ class PC_Center extends StatelessWidget {
   //   required this.setupPageRoute,
   // }) : super(key: key);
 
-  // final String setupPageRoute;
+  final Widget page;
+  const PC_Center(this.page);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Expanded(
         child: Scaffold(
-            // body: Container(
-            //   color: Colors.red,
-
-            // ),
-
-            ),
+          body: MaterialApp(
+            //color: Colors.red,
+            initialRoute: '/',
+            routes: {
+              routeHome: (context) => page,
+              routeMATCPlist: (context) => page,
+              //'/MATCPlist': (context) => MATCPlist(),
+            },
+          ),
+        ),
       ),
     );
   }
