@@ -286,6 +286,65 @@ class _Upcomming_menuState extends State<Upcomming_menu> {
 
 //**ข้อมูลกล่องในboxstatus*/
 
+// class Box_status extends StatefulWidget {
+//   Box_status({Key? key}) : super(key: key);
+
+//   @override
+//   _Box_statusState createState() => _Box_statusState();
+// }
+
+// class _Box_statusState extends State<Box_status> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Wrap(
+//       children: [
+// Container(
+//   height: 128,
+//   width: 260,
+//   decoration: BoxDecoration(
+//       image: DecorationImage(
+//           image: AssetImage('assets/images/icon-edit-copy-10.png'))),
+// ),
+// Container(
+//   height: 128,
+//   width: 260,
+//   decoration: BoxDecoration(
+//       image: DecorationImage(
+//           image: AssetImage('assets/images/icon-edit-copy-5.png'))),
+// ),
+// Container(
+//   height: 128,
+//   width: 260,
+//   decoration: BoxDecoration(
+//       image: DecorationImage(
+//           image: AssetImage('assets/images/icon-edit-copy-7.png'))),
+// ),
+// Container(
+//   height: 128,
+//   width: 260,
+//   decoration: BoxDecoration(
+//       image: DecorationImage(
+//           image: AssetImage('assets/images/icon-edit-copy-8.png'))),
+// ),
+// Container(
+//   height: 128,
+//   width: 260,
+//   decoration: BoxDecoration(
+//       image: DecorationImage(
+//           image: AssetImage('assets/images/icon-edit-copy-9.png'))),
+// ),
+// Container(
+//   height: 128,
+//   width: 260,
+//   decoration: BoxDecoration(
+//       image: DecorationImage(
+//           image: AssetImage('assets/images/icon-edit-copy-6.png'))),
+// ),
+//       ],
+//     );
+//   }
+// }
+
 class Box_status extends StatefulWidget {
   Box_status({Key? key}) : super(key: key);
 
@@ -296,51 +355,233 @@ class Box_status extends StatefulWidget {
 class _Box_statusState extends State<Box_status> {
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      children: [
-        Container(
-          height: 128,
-          width: 260,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/icon-edit-copy-10.png'))),
+    return Container(
+      color: Colors.blue,
+      //height: 500,
+      // child: Expanded(
+      child: Center(
+        child: Column(
+          children: <Widget>[
+            Container(
+              color: Colors.pink,
+              // child: Padding(
+              //   padding:
+              //       EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center, //Axis-Y
+                crossAxisAlignment: CrossAxisAlignment.center, //Axis-X
+                children: [fixbox11(), fixbox12(), fixbox13()],
+              ),
+            ),
+            // ),
+            Container(
+              color: Colors.pink,
+              // child: Padding(
+              //   padding:
+              //       EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center, //Axis-Y
+                crossAxisAlignment: CrossAxisAlignment.center, //Axis-X
+                children: [fixbox21(), fixbox22(), fixbox23()],
+              ),
+            ),
+          ],
         ),
-        Container(
-          height: 128,
-          width: 260,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/icon-edit-copy-5.png'))),
-        ),
-        Container(
-          height: 128,
-          width: 260,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/icon-edit-copy-7.png'))),
-        ),
-        Container(
-          height: 128,
-          width: 260,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/icon-edit-copy-8.png'))),
-        ),
-        Container(
-          height: 128,
-          width: 260,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/icon-edit-copy-9.png'))),
-        ),
-        Container(
-          height: 128,
-          width: 260,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/icon-edit-copy-6.png'))),
-        ),
-      ],
+      ),
+
+      // )
+    );
+  }
+}
+
+class fixbox11 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Expanded(
+        child: dashtop01(),
+      ),
+    );
+  }
+}
+
+class fixbox12 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Expanded(
+        child: dashtop02(),
+      ),
+    );
+  }
+}
+
+class fixbox13 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Expanded(
+        child: dashtop03(),
+      ),
+    );
+  }
+}
+
+class dashtop01 extends StatefulWidget {
+  @override
+  _dashtop01State createState() => _dashtop01State();
+}
+
+class _dashtop01State extends State<dashtop01> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 128,
+      width: 260,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/icon-edit-copy-7.png'))),
+    );
+  }
+}
+
+class dashtop02 extends StatefulWidget {
+  dashtop02({Key? key}) : super(key: key);
+
+  @override
+  _dashtop02State createState() => _dashtop02State();
+}
+
+class _dashtop02State extends State<dashtop02> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 128,
+      width: 260,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/icon-edit-copy-8.png'))),
+    );
+  }
+}
+
+class dashtop03 extends StatefulWidget {
+  dashtop03({Key? key}) : super(key: key);
+
+  @override
+  _dashtop03State createState() => _dashtop03State();
+}
+
+class _dashtop03State extends State<dashtop03> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Container(
+        height: 128,
+        width: 260,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/icon-edit-copy-9.png'))),
+      ),
+    );
+  }
+}
+
+class fixbox21 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Expanded(
+        child: dashbot01(),
+      ),
+    );
+  }
+}
+
+class fixbox22 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Expanded(
+        child: dashbot02(),
+      ),
+    );
+  }
+}
+
+class fixbox23 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Expanded(
+        child: dashbot03(),
+      ),
+    );
+  }
+}
+
+class dashbot01 extends StatefulWidget {
+  dashbot01({Key? key}) : super(key: key);
+
+  @override
+  _dashbot01State createState() => _dashbot01State();
+}
+
+class _dashbot01State extends State<dashbot01> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Container(
+        height: 128,
+        width: 260,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/icon-edit-copy-8.png'))),
+      ),
+    );
+  }
+}
+
+class dashbot02 extends StatefulWidget {
+  dashbot02({Key? key}) : super(key: key);
+
+  @override
+  _dashbot02State createState() => _dashbot02State();
+}
+
+class _dashbot02State extends State<dashbot02> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Container(
+        height: 128,
+        width: 260,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/icon-edit-copy-9.png'))),
+      ),
+    );
+  }
+}
+
+class dashbot03 extends StatefulWidget {
+  dashbot03({Key? key}) : super(key: key);
+
+  @override
+  _dashbot03State createState() => _dashbot03State();
+}
+
+class _dashbot03State extends State<dashbot03> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Container(
+        height: 128,
+        width: 260,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/icon-edit-copy-6.png'))),
+      ),
     );
   }
 }

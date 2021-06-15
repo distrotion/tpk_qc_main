@@ -4,6 +4,7 @@ import 'package:tpk_qc_main/view/page/PC/Home.dart';
 import 'package:tpk_qc_main/view/page/PC/MATCPlist.dart';
 import 'package:tpk_qc_main/widget/Menu/MainMenu.dart';
 import 'package:tpk_qc_main/widget/AppBar/App_Bar.dart';
+import 'package:tpk_qc_main/widget/popbar/mdtest.dart';
 
 const routeHome = '/';
 const routeLogin = '/login';
@@ -106,11 +107,13 @@ class Right extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Color(0xFF0b1327),
-      width: 300,
+      width: 312,
+      //height: (MediaQuery.of(context).size.height),
       child: Padding(
           padding: EdgeInsets.only(left: 1, right: 1, top: 0, bottom: 30),
           child: ListView(children: <Widget>[
             //SomeSmlimBox(input),
+            Mainmenu_Right()
           ])),
     );
   }

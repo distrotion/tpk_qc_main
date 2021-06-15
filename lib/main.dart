@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //home: MainStructure(),
       initialRoute: '/',
+
       onGenerateRoute: (settings) {
         late Widget page;
         if (settings.name == routeHome) {
@@ -60,8 +61,10 @@ class MyApp extends StatelessWidget {
           page = MainStructure(MasterFinal());
         } else if (settings.name == routeLogin) {
           page = Login();
-        } else if (settings.name == '/test') {
+        } else if (settings.name == '/test1') {
           page = MainStructure(Mainmenu_center());
+        } else if (settings.name == '/test2') {
+          page = MainStructure(test());
         } else {
           throw Exception('Unknown route: ${settings.name}');
         }
