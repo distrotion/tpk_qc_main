@@ -88,13 +88,21 @@ class PC_Center extends StatelessWidget {
         child: Scaffold(
           body: MaterialApp(
             debugShowCheckedModeBanner: false,
+
+            title: 'Thaiparker QC',
+            theme: ThemeData(
+                primarySwatch: Colors.blue,
+                textTheme: Theme.of(context).textTheme.apply(
+                      fontFamily: 'Mitr',
+                    )),
             //color: Colors.red,
-            initialRoute: '/',
-            routes: {
-              routeHome: (context) => page,
-              //routeMATCPlist: (context) => page,
-              //'/MATCPlist': (context) => MATCPlist(),
-            },
+            home: page,
+            //initialRoute: '/',
+            // routes: {
+            //   routeHome: (context) => page,
+            //   //routeMATCPlist: (context) => page,
+            //   //'/MATCPlist': (context) => MATCPlist(),
+            // },
           ),
         ),
       ),

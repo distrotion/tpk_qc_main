@@ -10,24 +10,26 @@ class Mainmenu_center extends StatefulWidget {
 class _Mainmenu_centerState extends State<Mainmenu_center> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: (MediaQuery.of(context).size.height - 70),
-      //width: 878,
-      color: Color(0xff0b1327),
-      child: Column(
-        children: [
-          Container(
-              //width: 878,
-              height: (MediaQuery.of(context).size.height - 70),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                //color: Colors.green.shade200,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30),
+    return Scaffold(
+      body: Container(
+        height: (MediaQuery.of(context).size.height - 70),
+        //width: 878,
+        color: Color(0xff0b1327),
+        child: Column(
+          children: [
+            Container(
+                //width: 878,
+                height: (MediaQuery.of(context).size.height - 70),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  //color: Colors.green.shade200,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                  ),
                 ),
-              ),
-              child: Clinic_SpaceZone()),
-        ],
+                child: Clinic_SpaceZone()),
+          ],
+        ),
       ),
     );
   }

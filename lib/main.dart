@@ -38,9 +38,8 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'Mitr',
               )),
       debugShowCheckedModeBanner: false,
-      //home: MainStructure(),
+      home: MainStructure(Home()),
       initialRoute: '/',
-
       onGenerateRoute: (settings) {
         late Widget page;
         if (settings.name == routeHome) {
