@@ -16,14 +16,25 @@ import 'package:flutter/material.dart';
 //   }
 // }
 
-class MasterFinal extends StatefulWidget {
-  MasterFinal({Key? key}) : super(key: key);
+class MasterFinal extends StatelessWidget {
+  const MasterFinal({Key? key}) : super(key: key);
 
   @override
-  _MasterFinalState createState() => _MasterFinalState();
+  Widget build(BuildContext context) {
+    return Container(
+      child: MasterFinal_B(),
+    );
+  }
 }
 
-class _MasterFinalState extends State<MasterFinal> {
+class MasterFinal_B extends StatefulWidget {
+  MasterFinal_B({Key? key}) : super(key: key);
+
+  @override
+  _MasterFinal_BState createState() => _MasterFinal_BState();
+}
+
+class _MasterFinal_BState extends State<MasterFinal_B> {
   int _selectedIndex = 0;
 
   final List<Widget> _children = [

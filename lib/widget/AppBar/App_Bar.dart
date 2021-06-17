@@ -28,6 +28,7 @@ class _App_BarState extends State<App_Bar> {
               Logo1(),
             ],
           ),
+          Text(MediaQuery.of(context).size.width.toString()),
           Pack_topright_bar(),
         ],
       ),

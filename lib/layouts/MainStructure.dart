@@ -85,26 +85,28 @@ class PC_Center extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Expanded(
-        child: Scaffold(
-          body: MaterialApp(
-            debugShowCheckedModeBanner: false,
+        child:
+            // Scaffold(
+            //   body:
+            MaterialApp(
+          debugShowCheckedModeBanner: false,
 
-            title: 'Thaiparker QC',
-            theme: ThemeData(
-                primarySwatch: Colors.blue,
-                textTheme: Theme.of(context).textTheme.apply(
-                      fontFamily: 'Mitr',
-                    )),
-            //color: Colors.red,
-            home: page,
-            //initialRoute: '/',
-            // routes: {
-            //   routeHome: (context) => page,
-            //   //routeMATCPlist: (context) => page,
-            //   //'/MATCPlist': (context) => MATCPlist(),
-            // },
-          ),
+          title: 'Thaiparker QC',
+          theme: ThemeData(
+              primarySwatch: Colors.blue,
+              textTheme: Theme.of(context).textTheme.apply(
+                    fontFamily: 'Mitr',
+                  )),
+          //color: Colors.red,
+          home: page,
+          //initialRoute: '/',
+          // routes: {
+          //   routeHome: (context) => page,
+          //   //routeMATCPlist: (context) => page,
+          //   //'/MATCPlist': (context) => MATCPlist(),
+          // },
         ),
+        //),
       ),
     );
   }
